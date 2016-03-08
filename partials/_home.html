@@ -1,0 +1,44 @@
+<h1 style="text-align: center;">Olá, mundo!</h1>
+<p>Exemplo de parágrafo.</p>
+<h1>Lista de tecnologias Web</h1>
+<h2 id="frontend">Tecnologias de front-end</h2>
+<ul>
+	<li>HTML</li>
+	<li>CSS</li>
+	<li>JavaScript</li>
+</ul>
+
+<h2 id="backend">Tecnologias de back-end</h2>
+<ul>
+	<li>Java EE</li>
+	<li>NodeJS</li>
+	<li>PHP</li>
+</ul>
+
+<h2 id="browserengines">Browsers Engines</h2>
+<table border="1">
+	<tr>
+		<th>Browser Name</th>
+		<th>Engine</th>
+	</tr>
+	<tr ng-repeat="browser in browsers">
+		<th>{{browser.nav}}</th>
+		<th>{{browser.eng}}</th>
+	</tr>
+</table>
+
+<h1 id="siglas">Siglas Importantes</h1>
+<dl>
+	<dt>HTML</dt>
+	<dd>Hypertext Markup Language</dd>
+</dl>
+<dl>
+	<dt>CSS</dt>
+	<dd>Cascading Style Sheets</dd>
+</dl>
+<dl>
+	<dt>HTTP</dt>
+	<dd>HyperText Transfer Protocol</dd>
+</dl>
+
+<a ui-sref="curriculum">Clique aqui para ver meu currículo</a>
