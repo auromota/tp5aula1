@@ -1,9 +1,9 @@
-<a ui-sref="home">Voltar</a>
+<a ui-sref="home"> << Voltar</a> <a ui-sref="editCurriculum">Editar >></a>
 <h2>Dados pessoais</h2>
-<p>Auro Felipe Sampaio Mota<br>
-Brasileiro, 20 anos, solteiro<br>
-Celular: (35) 99921-7877<br>
-E-mail: palubo01@gmail.com</p>
+<p>{{curriculum.nome}}<br>
+{{curriculum.nacionalidade}}, {{curriculum.idade}} anos, {{curriculum.estadoCivil}}<br>
+Telefone: {{curriculum.telefone}}<br>
+E-mail: {{curriculum.email}}</p>
 <h2>Endereço</h2>
 <p>Rua Quatro, nº. 85 – Monte Carlo – CEP. 37.550-000<br>
 Pouso Alegre – MG</p>
@@ -24,7 +24,3 @@ Pouso Alegre – MG</p>
 	<li>Ionic Framework</li>
 	<li>AngularJS</li>
 </ul>
-
-Email: <input type="email" ng-model="email"></input><br>
-Mensagem: <input type="text" ng-model="text"></input>
-<button ng-click="show()">Entre em contato!</button>

@@ -11,6 +11,11 @@ app.config(function($stateProvider, $urlRouterProvider) {
 			url: '/curriculum',
 			templateUrl: 'partials/_curriculum.html',
 			controller: 'CurriculumController'
+		})
+		.state('editCurriculum', {
+			url: '/editCurriculum',
+			templateUrl: 'partials/_edit-curriculum.html',
+			controller: 'EditCurriculumController'
 		});
 		
 	$urlRouterProvider.otherwise('/home');
@@ -26,14 +31,23 @@ app.config(function($stateProvider, $urlRouterProvider) {
 	];
 })
 
-.controller('CurriculumController', function($scope) {
-	$scope.show = function() {
-		if(!$scope.email) alert('Preencha o e-mail.')
-		else if (!$scope.text) alert('Preencha a mensagem.')
-		else {
-			alert('Mensagem enviada!\n\n' + $scope.text);
-			$scope.text = '';
-			$scope.email = '';
-		}
+.controller('CurriculumController', function($scope, Curriculum) {
+	$scope.curriculum = Curriculum;
+})
+
+.factory('Curriculum', function() {
+	return this;
+})
+
+.controller('EditCurriculumController', function($scope, Curriculum) {
+	$scope.populate = function() {
+		$scope.curriculum = Curriculum;
 	}
+
+	$scope.update = function() {
+		Curriculum = $scope.curriculum;
+	}
+
+	$scope.populate();
+	
 });
